@@ -1,20 +1,19 @@
-// config.js
 turnConfig = {
-  iceServers: [
-    {
-      urls: ["turn:20.235.254.6:3478"],
-      username: "examly-turnserver",
-      credential: "examly@123"
-    },
-    {
-      urls: ["turn:turn-server.centralindia.cloudapp.azure.com:3478"],
-      username: "examly-turnserver",
-      credential: "examly@123"
-    },
-    {
-      urls: ["turn:dualproctoring.turn-server.examly.io:3478"],
-      username: "examly-turnserver",
-      credential: "examly@123"
-    }
-  ]
+    iceServers: [
+    {   
+      urls: [ "stun:stun.exam.ly" ]
+    }, 
+    {   
+      username: "examly",   
+      credential: "examly@123",   
+      urls: [       
+        "turn:turn.exam.ly:80?transport=udp",       
+        "turn:turn.exam.ly:3478?transport=udp",       
+        "turn:turn.exam.ly:80?transport=tcp",       
+        "turn:turn.exam.ly:3478?transport=tcp",       
+        "turns:turn.exam.ly:443?transport=tcp",       
+        "turns:turn.exam.ly:5349?transport=tcp"   
+       ]
+     }
+   ]
 }
